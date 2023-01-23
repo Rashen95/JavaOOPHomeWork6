@@ -9,7 +9,7 @@ public class SelectionOfSweets {
             String number = new UserInput().input();
             if (new Checker().isDigit(number)) {
                 int numberInt = Integer.parseInt(number);
-                if (numberInt > 0 && numberInt < 28) {
+                if (numberInt > 0 && numberInt < 29) {
                     if (numberInt <= numberOfCandies) {
                         flag = true;
                         numberOfCandies = numberOfCandies - numberInt;

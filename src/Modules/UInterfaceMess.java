@@ -2,9 +2,9 @@ package Modules;
 
 public class UInterfaceMess {
     private static final String greetings = "\nВы запустили игру в конфетки";
-    private static final String regulations = "Перед вами лежит 200 конфет. За один ход можно брать от 1 до 27 конфет. Побеждает тот, кто возьмет последние конфеты";
+    private static final String regulations = "Перед вами лежит 200 конфет. За один ход можно брать от 1 до 28 конфет. Побеждает тот, кто возьмет последние конфеты";
     private static final String errorDigit = "\nВы ввели не число";
-    private static final String errorSweetsNumber = "\nВы ввели неверное количество\nМожно взять от 1 до 27 конфет";
+    private static final String errorSweetsNumber = "\nВы ввели неверное количество\nМожно взять от 1 до 28 конфет";
     private static final String errorRemainingSweets = "\nВы хотите взять больше конфет чем осталось";
     private static final String mainMenuWithSave = "\n1. Играть с ботом\n2. Играть с другом\n3. Загрузить прошлую игру\n4. Выйти из игры";
     private static final String mainMenuWithOutSave = "\n1. Играть с ботом\n2. Играть с другом\n3. Выйти из игры";
