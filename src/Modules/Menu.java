@@ -1,11 +1,16 @@
+package Modules;
+
+import java.io.FileNotFoundException;
+
 public class Menu {
-    public void startMenu() {
+    public void startMenu() throws FileNotFoundException {
         UInterfaceMess UI = new UInterfaceMess();
         System.out.println(UI.getGreetings());
+        System.out.println(UI.getRegulations());
         new Menu().mainMenu();
     }
 
-    public void mainMenu() {
+    public void mainMenu() throws FileNotFoundException {
         UInterfaceMess UI = new UInterfaceMess();
         boolean flag = false;
         if (new SaveChecker().check()) {
@@ -23,7 +28,7 @@ public class Menu {
                     }
                     case "3" -> {
                         flag = true;
-                        System.out.println("ГРУЖУ");
+                        new SaveReader().read();
                     }
                     case "4" -> {
                         flag = true;

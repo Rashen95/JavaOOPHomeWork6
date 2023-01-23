@@ -1,3 +1,5 @@
+package Modules;
+
 public class Checker {
     public boolean isDigit(String s) throws NumberFormatException {
         try {

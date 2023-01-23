@@ -1,3 +1,5 @@
+package Modules;
+
 import java.io.File;
 
 public class Game {
@@ -7,13 +9,15 @@ public class Game {
             if (move == 1) {
                 System.out.println(UI.playerTurn(firstPlayer));
                 numberOfCandies = new SelectionOfSweets().sel(numberOfCandies);
-                System.out.println(UI.leftoverCandy(numberOfCandies));
                 move = 2;
                 new SaveWritter().write(firstPlayer, secondPlayer, move, numberOfCandies);
             } else {
-                System.out.println(UI.playerTurn(secondPlayer));
-                numberOfCandies = new SelectionOfSweets().sel(numberOfCandies);
-                System.out.println(UI.leftoverCandy(numberOfCandies));
+                if (!secondPlayer.equals("Бот")) {
+                    System.out.println(UI.playerTurn(secondPlayer));
+                    numberOfCandies = new SelectionOfSweets().sel(numberOfCandies);
+                } else {
+                    numberOfCandies = new Bot().selectionOfSweets(numberOfCandies);
+                }
                 move = 1;
                 new SaveWritter().write(firstPlayer, secondPlayer, move, numberOfCandies);
             }

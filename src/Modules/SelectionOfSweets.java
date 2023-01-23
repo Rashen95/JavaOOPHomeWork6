@@ -1,9 +1,11 @@
+package Modules;
+
 public class SelectionOfSweets {
     public int sel(int numberOfCandies) {
         UInterfaceMess UI = new UInterfaceMess();
         boolean flag = false;
         while (!flag) {
-            System.out.println(UI.getSelectionOfSweets());
+            System.out.println(UI.getSelectionOfSweets(numberOfCandies));
             String number = new UserInput().input();
             if (new Checker().isDigit(number)) {
                 int numberInt = Integer.parseInt(number);

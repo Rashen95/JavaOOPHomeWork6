@@ -1,7 +1,8 @@
+package Modules;
+
 public class UInterfaceMess {
     private static final String greetings = "\nВы запустили игру в конфетки";
-    private static final String regulations = "\nПеред вами 2021 конфета. За один ход можно брать от 1 до 27 конфет. Побеждает тот, кто возьмет последние конфеты";
-    private static final String selectionOfSweets = "\nСколько конфет вы возьмете?";
+    private static final String regulations = "Перед вами лежит 200 конфет. За один ход можно брать от 1 до 27 конфет. Побеждает тот, кто возьмет последние конфеты";
     private static final String errorDigit = "\nВы ввели не число";
     private static final String errorSweetsNumber = "\nВы ввели неверное количество\nМожно взять от 1 до 27 конфет";
     private static final String errorRemainingSweets = "\nВы хотите взять больше конфет чем осталось";
@@ -18,10 +19,6 @@ public class UInterfaceMess {
 
     public String getRegulations() {
         return regulations;
-    }
-
-    public String getSelectionOfSweets() {
-        return selectionOfSweets;
     }
 
     public String getErrorDigit() {
@@ -64,11 +61,15 @@ public class UInterfaceMess {
         return String.format("\n%s, ход за вами", playerName);
     }
 
-    public String leftoverCandy(int numberOfCandies) {
-        return String.format("\n%d конфет осталось", numberOfCandies);
+    public String getSelectionOfSweets(int numberOfCandies) {
+        return String.format("Осталось %s конфет. Сколько возьмете?", numberOfCandies);
     }
 
     public String playerWin(String playerName) {
         return String.format("\n%s стал победителем", playerName);
+    }
+
+    public String botTurn(int subtrahend) {
+        return String.format("\nБот взял %s конфет", subtrahend);
     }
 }
